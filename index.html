@@ -4,14 +4,38 @@
     <title>City Score</title>
     <!-- You will load the D3 library here. -->
     <script src="https://d3js.org/d3.v4.js" charset="utf-8"></script>
-    <link type=stylesheet href="/dist/main.css"></link>    
+    <link type=stylesheet href="/dist/main.css"></link> 
+    
+    <style>
+        .dropdown-menu {
+        display: block;
+        border: 1px solid black;
+        }   
+
+        .active {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Page elements and content go here. -->
     <div>hello</div>
-    <div class="profile"></div>
     
+    <div class="dropdown-menu">
+        <div class="title">Select a City</i></div>
+
+        <div class="menu-list active">
+            <ul class="list-items">
+                <li  class="option" id = 1>city 1</li>
+                <li class="option" id = 2>city 2</li>
+                <li class="option" id = 3>city 3</li>
+                <li class="option" id = 4>city 4</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="profile"></div>
     <div class="chart"></div>
     <script src="/dist/main.js"></script>
 </body>
