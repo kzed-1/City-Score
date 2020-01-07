@@ -1,5 +1,5 @@
-{
-    "name": "boston",
+{   
+    "name": "New York",
     "_links": {
         "curies": [
             {
@@ -34,7 +34,7 @@
             }
         ],
         "self": {
-            "href": "https://api.teleport.org/api/urban_areas/slug:boston/scores/"
+            "href": "https://api.teleport.org/api/urban_areas/slug:new-york/scores/"
         }
     },
     "categories": [
@@ -46,12 +46,12 @@
         {
             "color": "#f3d630",
             "name": "Cost of Living",
-            "score_out_of_10": 4.259
+            "score_out_of_10": 2.342
         },
         {
             "color": "#f4eb33",
             "name": "Startups",
-            "score_out_of_10": 9.565000000000001
+            "score_out_of_10": 10.0
         },
         {
             "color": "#d2ed31",
@@ -61,12 +61,12 @@
         {
             "color": "#7adc29",
             "name": "Travel Connectivity",
-            "score_out_of_10": 3.215
+            "score_out_of_10": 6.675
         },
         {
             "color": "#36cc24",
             "name": "Commute",
-            "score_out_of_10": 4.39625
+            "score_out_of_10": 5.5192499999999995
         },
         {
             "color": "#19ad51",
@@ -76,22 +76,22 @@
         {
             "color": "#0d6999",
             "name": "Safety",
-            "score_out_of_10": 7.742000000000001
+            "score_out_of_10": 7.022
         },
         {
             "color": "#051fa5",
             "name": "Healthcare",
-            "score_out_of_10": 8.956
+            "score_out_of_10": 8.501666666666665
         },
         {
             "color": "#150e78",
             "name": "Education",
-            "score_out_of_10": 8.6245
+            "score_out_of_10": 8.0935
         },
         {
             "color": "#3d14a4",
             "name": "Environmental Quality",
-            "score_out_of_10": 8.1705
+            "score_out_of_10": 5.233749999999999
         },
         {
             "color": "#5c14a1",
@@ -101,29 +101,29 @@
         {
             "color": "#88149f",
             "name": "Taxation",
-            "score_out_of_10": 4.062
+            "score_out_of_10": 3.9205
         },
         {
             "color": "#b9117d",
             "name": "Internet Access",
-            "score_out_of_10": 5.700500000000001
+            "score_out_of_10": 7.0985
         },
         {
             "color": "#d10d54",
             "name": "Leisure \u0026 Culture",
-            "score_out_of_10": 8.564
+            "score_out_of_10": 10.0
         },
         {
             "color": "#e70c26",
             "name": "Tolerance",
-            "score_out_of_10": 8.4815
+            "score_out_of_10": 6.7125
         },
         {
             "color": "#f1351b",
             "name": "Outdoors",
-            "score_out_of_10": 5.659999999999999
+            "score_out_of_10": 5.7475
         }
     ],
-    "summary": "\u003cp\u003e\n    One of the oldest and most historic cities in the US, Boston is a center of higher education with some of the \u003cb\u003etop universities\u003c/b\u003e in the world. It has also developed a vibrant technology scene and is home to numerous \u003cb\u003eventure capital\u003c/b\u003e firms, all supporting high rates of innovation and entrepreneurship. Add its \u003cb\u003etolerant\u003c/b\u003e environment, great quality of \u003cb\u003ehealthcare\u003c/b\u003e and beautiful New England nature, and you've got an enticing city that attracts talent from around the world.\n\u003c/p\u003e\n\n\n    \u003cp\u003eBoston is one of the top ten city matches for 12.8% of Teleport users.\u003c/p\u003e\n",
-    "teleport_city_score": 67.32635135135136
+    "summary": "\u003cp\u003e\n    The New York metropolitan area is one of the most populated cities in the world. New York City itself is an \u003cb\u003einternational center for numerous industries\u003c/b\u003e including finance, theater, television, film, arts, and technology. It is also home to an astonishing 37% of foreign-born residents. Costs are high, but so are the energy levels and \u003cb\u003eambitious spirit\u003c/b\u003e. Whether you're visiting or planning to move, the \"Big Apple\" has \u003cb\u003esomething to offer for everyone\u003c/b\u003e.\n\u003c/p\u003e\n\n\n    \u003cp\u003eNew York is one of the top ten city matches for 13.9% of Teleport users.\u003c/p\u003e\n",
+    "teleport_city_score": 67.27513513513514
 }

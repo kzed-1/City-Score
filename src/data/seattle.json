@@ -1,5 +1,5 @@
 {
-    "name": "boston",
+    "name": "seattle",
     "_links": {
         "curies": [
             {
@@ -34,39 +34,39 @@
             }
         ],
         "self": {
-            "href": "https://api.teleport.org/api/urban_areas/slug:boston/scores/"
+            "href": "https://api.teleport.org/api/urban_areas/slug:seattle/scores/"
         }
     },
     "categories": [
         {
             "color": "#f3c32c",
             "name": "Housing",
-            "score_out_of_10": 1.0
+            "score_out_of_10": 2.291
         },
         {
             "color": "#f3d630",
             "name": "Cost of Living",
-            "score_out_of_10": 4.259
+            "score_out_of_10": 3.79
         },
         {
             "color": "#f4eb33",
             "name": "Startups",
-            "score_out_of_10": 9.565000000000001
+            "score_out_of_10": 8.367
         },
         {
             "color": "#d2ed31",
             "name": "Venture Capital",
-            "score_out_of_10": 10.0
+            "score_out_of_10": 7.551000000000001
         },
         {
             "color": "#7adc29",
             "name": "Travel Connectivity",
-            "score_out_of_10": 3.215
+            "score_out_of_10": 2.8845
         },
         {
             "color": "#36cc24",
             "name": "Commute",
-            "score_out_of_10": 4.39625
+            "score_out_of_10": 4.523750000000001
         },
         {
             "color": "#19ad51",
@@ -76,22 +76,22 @@
         {
             "color": "#0d6999",
             "name": "Safety",
-            "score_out_of_10": 7.742000000000001
+            "score_out_of_10": 5.6365
         },
         {
             "color": "#051fa5",
             "name": "Healthcare",
-            "score_out_of_10": 8.956
+            "score_out_of_10": 8.724333333333332
         },
         {
             "color": "#150e78",
             "name": "Education",
-            "score_out_of_10": 8.6245
+            "score_out_of_10": 5.7145
         },
         {
             "color": "#3d14a4",
             "name": "Environmental Quality",
-            "score_out_of_10": 8.1705
+            "score_out_of_10": 7.560250000000001
         },
         {
             "color": "#5c14a1",
@@ -101,29 +101,29 @@
         {
             "color": "#88149f",
             "name": "Taxation",
-            "score_out_of_10": 4.062
+            "score_out_of_10": 4.772
         },
         {
             "color": "#b9117d",
             "name": "Internet Access",
-            "score_out_of_10": 5.700500000000001
+            "score_out_of_10": 4.940499999999999
         },
         {
             "color": "#d10d54",
             "name": "Leisure \u0026 Culture",
-            "score_out_of_10": 8.564
+            "score_out_of_10": 8.1155
         },
         {
             "color": "#e70c26",
             "name": "Tolerance",
-            "score_out_of_10": 8.4815
+            "score_out_of_10": 8.0895
         },
         {
             "color": "#f1351b",
             "name": "Outdoors",
-            "score_out_of_10": 5.659999999999999
+            "score_out_of_10": 7.2094999999999985
         }
     ],
-    "summary": "\u003cp\u003e\n    One of the oldest and most historic cities in the US, Boston is a center of higher education with some of the \u003cb\u003etop universities\u003c/b\u003e in the world. It has also developed a vibrant technology scene and is home to numerous \u003cb\u003eventure capital\u003c/b\u003e firms, all supporting high rates of innovation and entrepreneurship. Add its \u003cb\u003etolerant\u003c/b\u003e environment, great quality of \u003cb\u003ehealthcare\u003c/b\u003e and beautiful New England nature, and you've got an enticing city that attracts talent from around the world.\n\u003c/p\u003e\n\n\n    \u003cp\u003eBoston is one of the top ten city matches for 12.8% of Teleport users.\u003c/p\u003e\n",
-    "teleport_city_score": 67.32635135135136
+    "summary": "\u003cp\u003eSeattle, Washington, is among the top cities with a \u003cb\u003efree business environment\u003c/b\u003e.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in \u003cb\u003estartups\u003c/b\u003e, \u003cb\u003eventure capital\u003c/b\u003e and \u003cb\u003ehealthcare\u003c/b\u003e.\n    \n\n    \n\u003c/p\u003e\n\n\n    \u003cp\u003eSeattle is one of the top ten city matches for 3.2% of Teleport users.\u003c/p\u003e\n",
+    "teleport_city_score": 62.74189189189191
 }
