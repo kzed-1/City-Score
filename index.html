@@ -15,6 +15,13 @@
         .active {
             display: none;
         }
+
+        .menu-list {
+            position: absolute;
+            background-color: white;
+            list-style-type: none;
+        }
+
     </style>
 </head>
 
@@ -23,14 +30,15 @@
     <div>hello</div>
     
     <div class="dropdown-menu">
-        <div class="title">Select a City</i></div>
+        <div class="title">Select a City</div>
 
         <div class="menu-list active">
             <ul class="list-items">
-                <li  class="option" id = 1>city 1</li>
-                <li class="option" id = 2>city 2</li>
-                <li class="option" id = 3>city 3</li>
-                <li class="option" id = 4>city 4</li>
+                <li  class="city" id = "/src/data/newyork.json"> New York</li>
+                <li class="city" id = "/src/data/boston.json"> Boston</li>
+                <li class="city" id = "/src/data/sanfran.json"> San Francisco</li>
+                <li class="city" id = "/src/data/seattle.json"> Seattle</li>
+                <li class="city" id = "/src/data/toronto.json"> Toronto</li>
             </ul>
         </div>
     </div>

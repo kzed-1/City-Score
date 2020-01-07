@@ -51,6 +51,7 @@
 
 const titleDropDown = document.querySelector('.title')
 const menuList = document.querySelector('.menu-list')
+const listItems = document.querySelectorAll(".city")
 
 function showDropdown(ele) {
 
@@ -62,5 +63,17 @@ function showDropdown(ele) {
 
 }
 
+function selectItem (ele) {
+    const eleText = ele.textContent
+    const titleEle = document.querySelector(".title")
+
+    titleEle.textContent = eleText;
+}
+
 titleDropDown.addEventListener('click', () => showDropdown(menuList))
+
+listItems.forEach(city => {
+    city.addEventListener('click', () => selectItem(city))
+})
+
 
