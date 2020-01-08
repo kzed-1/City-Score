@@ -42,6 +42,7 @@
 .header-wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 @keyframes animateWidth {
@@ -49,4 +50,7 @@
     to {width: attr(width) }
 }
 
+.score {
+    margin-right: 17px;
+}
 

@@ -37,9 +37,9 @@ function renderall() {
 
 
 function createBarGraph() {
-    // Width and height of SVG
-    var w = 500;
-    var h = 530;
+
+    var width = 500;
+    var height = 530;
 
     // Get length of dataset
     var arrayLength = bostonData.length; // length of dataset
@@ -47,7 +47,7 @@ function createBarGraph() {
     var x_axisLength = 500; // length of x-axis in our layout
     var y_axisLength = 500; // length of y-axis in our layout
 
-    // Use a scale for the height and width of the visualization
+
     var yScale = d3.scaleLinear()
         .domain([0, maxValue])
         .range([0, y_axisLength]);
@@ -58,41 +58,24 @@ function createBarGraph() {
 
 
 
-    //Create SVG element
     var svg = d3.select(".chart")
         .append("svg")
-        .attr("width", w)
-        .attr("height", h);
+        .attr("width", width)
+        .attr("height", height);
     
     svg.attr("class",`citychart ${name} hidden`)
-        // .style("display" , "none")
 
-    // Select and generate rectangle elements
     svg.selectAll("rect")
         .data(bostonData)
         .enter()
         .append("rect")
-        // .attr("x", function (d, i) {
-        //     return i * (x_axisLength / arrayLength) + 30; // Set x coordinate of rectangle to index of data value (i) *25
-        // })
         .attr("y", function (d, i) {
-            return i * (y_axisLength / arrayLength) + 30; // Set x coordinate of rectangle to index of data value (i) *25
+            return i * (y_axisLength / arrayLength) + 30; 
         })
-        // .attr("y", function (d) {
-        //     return h - yScale(d.score_out_of_10); // Set y coordinate of rect using the y scale
-        // })
-        .attr("x", function (d) {
-            // debugger
-            // return w - xScale(d.score_out_of_10); // Set x coordinate of rect using the x scale
-            return 0
-        })
-        // .attr("width", (x_axisLength / arrayLength) - 1)
-        // .attr("height", function (d) {
-        //     return yScale(d.score_out_of_10); // Set height of using the scale
-        // })
+        .attr("x", 0)
         .attr("height", (y_axisLength / arrayLength) - 1)
         .attr("width", function (d) {
-            return xScale(d.score_out_of_10); // Set height of using the scale
+            return xScale(d.score_out_of_10); 
         })
         .attr("fill", function (d) {
             return d.color
@@ -105,7 +88,7 @@ function createBarGraph() {
         })
         .on("mousemove", function (d) {
             return tooltip.style("top", (d3.event.pageY-10)+"px")
-                .style("left",(d3.event.pageX+10)+"px").text(d.name + ": " + d.score_out_of_10);
+                .style("left",(d3.event.pageX+10)+"px").text(d.name + ": " + d.score_out_of_10.toFixed(2));
         })
         .on("mouseout", function(d) {
             return tooltip.style("visibility", "hidden")
@@ -130,14 +113,7 @@ function createBarGraph() {
         .attr("stroke-width", 2)
         .attr("stroke", "black");
 
-    // y-axis label
-    svg.append("text")
-        .attr("class", "y label")
-        .attr("text-anchor", "end")
-        .text("score out of 10")
-        .attr("transform", "translate(20, 20) rotate(-90)")
-        .attr("font-size", "14")
-        .attr("font-family", "'Open Sans', sans-serif");
+
 
     var tooltip = d3.select(".chart")
         .append("div")
@@ -149,6 +125,9 @@ function createBarGraph() {
         .style("background-color", "white")
         .style("width", "auto")
         .style("margin", "0 auto")
+        .style("border-radius", "10px")
+        .style("padding", "10px")
+        .style("border", "1px solid black")
 };
 
 
@@ -156,7 +135,7 @@ function createTable () {
 
 
     const columns = ["name", "score_out_of_10"]
-    const columnNames = ["Categories", "Score out of 10"]
+    const columnNames = ["Categories", "Score"]
     
     let table = d3.select('.profile')
         .append('table')
@@ -181,7 +160,6 @@ function createTable () {
         })
         .style("text-align", "center")
         .text(function(d){
-            debugger
             return d;
         })
       
@@ -207,7 +185,7 @@ function createTable () {
         .append("td")
         .text(function(d){
             if (typeof d.value === "number"){
-                return d.value.fix(2)
+                return `${d.value.toFixed(2)} /10`
             }else {
                 return d.value
             }
