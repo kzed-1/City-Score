@@ -1,4 +1,52 @@
 .dropdown-menu {
     display: block;
     border: 1px solid black;
+    }   
+
+.active {
+    display: none;
 }
+
+.menu-list {
+    position: absolute;
+    background-color: white;
+    list-style-type: none;
+    z-index: 1;
+}
+
+.list-items {
+    list-style-type: none;
+}
+
+.hidden {
+    display:  none;
+}
+
+.profile-chart-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar {
+    animation-name: animateWidth;
+    animation-duration: 3s;
+}
+
+.table {
+    margin-top: 50px;
+    padding: 20px;
+    margin-right: 50px;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes animateWidth {
+    from {width: 0px }
+    to {width: attr(width) }
+}
+
+

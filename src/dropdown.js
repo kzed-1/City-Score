@@ -77,3 +77,9 @@ listItems.forEach(city => {
 })
 
 
+
+    d3.json(citySelection, function (error, data) {
+        bostonData = data.categories
+        createBarGraph();
+        createTable();
+    })

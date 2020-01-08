@@ -4,25 +4,7 @@
     <title>City Score</title>
     <!-- You will load the D3 library here. -->
     <script src="https://d3js.org/d3.v4.js" charset="utf-8"></script>
-    <link type=stylesheet href="/dist/main.css"></link> 
-    
-    <style>
-        .dropdown-menu {
-        display: block;
-        border: 1px solid black;
-        }   
-
-        .active {
-            display: none;
-        }
-
-        .menu-list {
-            position: absolute;
-            background-color: white;
-            list-style-type: none;
-        }
-
-    </style>
+    <link rel=stylesheet href="/dist/main.css"></link> 
 </head>
 
 <body>
@@ -42,9 +24,10 @@
             </ul>
         </div>
     </div>
-    
-    <div class="profile"></div>
-    <div class="chart"></div>
+    <div class="profile-chart-wrapper">
+        <div class="profile"></div>
+        <div class="chart"></div>
+    </div>
     <script src="/dist/main.js"></script>
 </body>
 

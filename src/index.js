@@ -1,5 +1,4 @@
 import './styles/index.scss';
-import '../dist/main.css';
 
 
 
@@ -8,8 +7,11 @@ let name, summary, cityScore;
 
 let citySelection = "/src/data/newyork.json"
 
-function render() {
+let cities = ["/src/data/newyork.json", "/src/data/sanfran.json", "/src/data/seattle.json", "/src/data/toronto.json", "/src/data/boston.json"] 
 
+
+
+function render() {
     d3.json(citySelection, function (error, data) {
 
         name = data.name
@@ -19,14 +21,25 @@ function render() {
         createBarGraph();
         createTable();
     })
-} 
+
+}
+
+function renderall() {
+    cities.forEach(city => {
+        citySelection = city 
+        render()
+    })
+}
+
+
+
 
 
 
 function createBarGraph() {
     // Width and height of SVG
-    var w = 700;
-    var h = 600;
+    var w = 500;
+    var h = 530;
 
     // Get length of dataset
     var arrayLength = bostonData.length; // length of dataset
@@ -50,6 +63,9 @@ function createBarGraph() {
         .append("svg")
         .attr("width", w)
         .attr("height", h);
+    
+    svg.attr("class",`citychart ${name} hidden`)
+        // .style("display" , "none")
 
     // Select and generate rectangle elements
     svg.selectAll("rect")
@@ -66,13 +82,15 @@ function createBarGraph() {
         //     return h - yScale(d.score_out_of_10); // Set y coordinate of rect using the y scale
         // })
         .attr("x", function (d) {
-            return w - xScale(d.score_out_of_10); // Set y coordinate of rect using the y scale
+            // debugger
+            // return w - xScale(d.score_out_of_10); // Set x coordinate of rect using the x scale
+            return 0
         })
         // .attr("width", (x_axisLength / arrayLength) - 1)
         // .attr("height", function (d) {
         //     return yScale(d.score_out_of_10); // Set height of using the scale
         // })
-        .attr("height", (x_axisLength / arrayLength) - 1)
+        .attr("height", (y_axisLength / arrayLength) - 1)
         .attr("width", function (d) {
             return xScale(d.score_out_of_10); // Set height of using the scale
         })
@@ -80,15 +98,26 @@ function createBarGraph() {
             return d.color
         })
         .attr("class", function(d) {
-            return `bar-${d.name}`;
+            return `bar ${d.name}`;
         })
+        .on("mouseover", function(d) {
+            return tooltip.style("visibility", "visible").text(d.name + ": " + d.score_out_of_10);
+        })
+        .on("mousemove", function (d) {
+            return tooltip.style("top", (d3.event.pageY-10)+"px")
+                .style("left",(d3.event.pageX+10)+"px").text(d.name + ": " + d.score_out_of_10);
+        })
+        .on("mouseout", function(d) {
+            return tooltip.style("visibility", "hidden")
+        })
+
 
     // Create y-axis
     svg.append("line")
-        .attr("x1", 30)
-        .attr("y1", 200)
-        .attr("x2", 30)
-        .attr("y2", 750)
+        .attr("x1", 700)
+        .attr("y1", 30)
+        .attr("x2", 700)
+        .attr("y2", 529)
         .attr("stroke-width", 2)
         .attr("stroke", "black");
 
@@ -109,20 +138,29 @@ function createBarGraph() {
         .attr("transform", "translate(20, 20) rotate(-90)")
         .attr("font-size", "14")
         .attr("font-family", "'Open Sans', sans-serif");
+
+    var tooltip = d3.select(".chart")
+        .append("div")
+        .style("position", "absolute")
+        .style("font-family", "roboto")
+        .style("font-size", "14px")
+        .style("z-index", "3")
+        .style("visibility", "hidden")
+        .style("background-color", "white")
+        .style("width", "auto")
+        .style("margin", "0 auto")
 };
 
 
 function createTable () {
 
-    var w = 500;
-    var h = 750;
 
     const columns = ["name", "score_out_of_10"]
-    const columnNames = ["Categories", "Score"]
+    const columnNames = ["Categories", "Score out of 10"]
     
     let table = d3.select('.profile')
         .append('table')
-        .attr("class", "table")
+        .attr("class", `table table-${name} hidden`)
         .style("border-radius", "10px")
         .style("border", "1px solid black");
     let header = table
@@ -138,8 +176,12 @@ function createTable () {
         .data(columnNames)
         .enter()
         .append("th")
+        .attr("class", function (d) {
+            return d;
+        })
         .style("text-align", "center")
         .text(function(d){
+            debugger
             return d;
         })
       
@@ -164,14 +206,18 @@ function createTable () {
         .enter()
         .append("td")
         .text(function(d){
-            return d.value
+            if (typeof d.value === "number"){
+                return d.value.fix(2)
+            }else {
+                return d.value
+            }
         })
 }
 
 
 const titleDropDown = document.querySelector('.title')
 const menuList = document.querySelector('.menu-list')
-const listItems = document.querySelectorAll(".city")
+const cityList = document.querySelectorAll(".city")
 
 function showDropdown(ele) {
     if (ele.className.includes("active")) {
@@ -181,25 +227,66 @@ function showDropdown(ele) {
     }
 }
 
+function showCharts(cityName) {
+    const cityNameRemovedSpace = cityName.split(" ")[1]
+    const cityChart = document.querySelector(`.${cityNameRemovedSpace}`)
+ 
+
+    const allCityCharts = document.querySelectorAll(".citychart")
+    allCityCharts.forEach(cityChart => {
+        if (!cityChart.className.baseVal.includes("hidden")) {
+            cityChart.className.baseVal = cityChart.className.baseVal + " hidden"
+        }
+    })
+
+    if (cityChart.className.baseVal.includes("hidden")){
+        cityChart.className.baseVal = `citychart ${cityName}`
+    }else {
+
+        cityChart.className.baseVal = cityChart.className.baseVal + " hidden"
+
+    }
+}
+
+function showTables(cityName) {
+    const cityNameRemovedSpace = cityName.split(" ")[1]
+    const cityTable = document.querySelector(`.table-${cityNameRemovedSpace}`)
+
+    const allCityTables = document.querySelectorAll(".table")
+    allCityTables.forEach(cityTable => {
+        if (!cityTable.className.includes("hidden")) {
+            cityTable.className = cityTable.className + " hidden"
+    
+        }
+    })
+
+    if (cityTable.className.includes("hidden")) {
+        cityTable.className = `table table-${cityNameRemovedSpace}`
+    } else {
+
+        cityTable.className = cityTable.className + " hidden"
+
+    }
+}
+
 function selectItem(ele) {
     const eleText = ele.textContent
     const titleEle = document.querySelector(".title")
-    citySelection = ele.id
     titleEle.textContent = eleText;
     showDropdown(menuList);
-    document.clear()
-    render()
+
+    showCharts(eleText)
+    showTables(eleText)
 }
 
 titleDropDown.addEventListener('click', () => showDropdown(menuList))
 
-listItems.forEach(city => {
+cityList.forEach(city => {
     city.addEventListener('click', () => selectItem(city))
 })
 
 
 
+renderall ()
 
 
-
-render()
