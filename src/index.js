@@ -363,7 +363,7 @@ function addEvents() {
     const barList = document.querySelectorAll(".bar")
     
     barList.forEach(bar => {
-        bar.add
+    
     })
     debugger
 }
