@@ -1,0 +1,129 @@
+{
+    "name": "Los Angeles",
+    "_links": {
+        "curies": [
+            {
+                "href": "https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/",
+                "name": "location",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/City/#!/relations/{rel}/",
+                "name": "city",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/UrbanArea/#!/relations/{rel}/",
+                "name": "ua",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Country/#!/relations/{rel}/",
+                "name": "country",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Admin1Division/#!/relations/{rel}/",
+                "name": "a1",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Timezone/#!/relations/{rel}/",
+                "name": "tz",
+                "templated": true
+            }
+        ],
+        "self": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:los-angeles/scores/"
+        }
+    },
+    "categories": [
+        {
+            "color": "#f3c32c",
+            "name": "Housing",
+            "score_out_of_10": 1.5274999999999999
+        },
+        {
+            "color": "#f3d630",
+            "name": "Cost of Living",
+            "score_out_of_10": 4.556000000000001
+        },
+        {
+            "color": "#f4eb33",
+            "name": "Startups",
+            "score_out_of_10": 10.0
+        },
+        {
+            "color": "#d2ed31",
+            "name": "Venture Capital",
+            "score_out_of_10": 10.0
+        },
+        {
+            "color": "#7adc29",
+            "name": "Travel Connectivity",
+            "score_out_of_10": 3.9585000000000004
+        },
+        {
+            "color": "#36cc24",
+            "name": "Commute",
+            "score_out_of_10": 3.6770000000000005
+        },
+        {
+            "color": "#19ad51",
+            "name": "Business Freedom",
+            "score_out_of_10": 8.574666666666667
+        },
+        {
+            "color": "#0d6999",
+            "name": "Safety",
+            "score_out_of_10": 5.705
+        },
+        {
+            "color": "#051fa5",
+            "name": "Healthcare",
+            "score_out_of_10": 8.439666666666666
+        },
+        {
+            "color": "#150e78",
+            "name": "Education",
+            "score_out_of_10": 8.6245
+        },
+        {
+            "color": "#3d14a4",
+            "name": "Environmental Quality",
+            "score_out_of_10": 4.7315000000000005
+        },
+        {
+            "color": "#5c14a1",
+            "name": "Economy",
+            "score_out_of_10": 6.5145
+        },
+        {
+            "color": "#88149f",
+            "name": "Taxation",
+            "score_out_of_10": 4.7675
+        },
+        {
+            "color": "#b9117d",
+            "name": "Internet Access",
+            "score_out_of_10": 5.496500000000001
+        },
+        {
+            "color": "#d10d54",
+            "name": "Leisure \u0026 Culture",
+            "score_out_of_10": 9.196
+        },
+        {
+            "color": "#e70c26",
+            "name": "Tolerance",
+            "score_out_of_10": 6.959999999999999
+        },
+        {
+            "color": "#f1351b",
+            "name": "Outdoors",
+            "score_out_of_10": 6.747
+        }
+    ],
+    "summary": "\u003cp\u003e\n    Los Angeles is a sprawling city of 500 square miles and the heart of a metropolitan area with 18 million residents. It is a fabled California region, home to Hollywood and America's \u003cb\u003eentertainment industry\u003c/b\u003e with \u003cb\u003eyear-round sunshine\u003c/b\u003e, world-famous beaches, and an intense \u003cb\u003ecar culture\u003c/b\u003e. The \"City of Angels\" is a magnet to people from around the world and a uniquely exciting environment.\n\u003c/p\u003e\n\n\n    \u003cp\u003eLos Angeles is one of the top ten city matches for 11.5% of Teleport users.\u003c/p\u003e\n",
+    "teleport_city_score": 63.426351351351364
+}

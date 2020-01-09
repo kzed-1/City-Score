@@ -1,0 +1,129 @@
+{
+    "name": "Chicago",
+    "_links": {
+        "curies": [
+            {
+                "href": "https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/",
+                "name": "location",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/City/#!/relations/{rel}/",
+                "name": "city",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/UrbanArea/#!/relations/{rel}/",
+                "name": "ua",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Country/#!/relations/{rel}/",
+                "name": "country",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Admin1Division/#!/relations/{rel}/",
+                "name": "a1",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Timezone/#!/relations/{rel}/",
+                "name": "tz",
+                "templated": true
+            }
+        ],
+        "self": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:chicago/scores/"
+        }
+    },
+    "categories": [
+        {
+            "color": "#f3c32c",
+            "name": "Housing",
+            "score_out_of_10": 3.7020000000000004
+        },
+        {
+            "color": "#f3d630",
+            "name": "Cost of Living",
+            "score_out_of_10": 4.766000000000001
+        },
+        {
+            "color": "#f4eb33",
+            "name": "Startups",
+            "score_out_of_10": 9.513
+        },
+        {
+            "color": "#d2ed31",
+            "name": "Venture Capital",
+            "score_out_of_10": 8.368
+        },
+        {
+            "color": "#7adc29",
+            "name": "Travel Connectivity",
+            "score_out_of_10": 5.5075
+        },
+        {
+            "color": "#36cc24",
+            "name": "Commute",
+            "score_out_of_10": 4.57975
+        },
+        {
+            "color": "#19ad51",
+            "name": "Business Freedom",
+            "score_out_of_10": 8.671
+        },
+        {
+            "color": "#0d6999",
+            "name": "Safety",
+            "score_out_of_10": 3.8320000000000003
+        },
+        {
+            "color": "#051fa5",
+            "name": "Healthcare",
+            "score_out_of_10": 8.555
+        },
+        {
+            "color": "#150e78",
+            "name": "Education",
+            "score_out_of_10": 7.999
+        },
+        {
+            "color": "#3d14a4",
+            "name": "Environmental Quality",
+            "score_out_of_10": 6.8045
+        },
+        {
+            "color": "#5c14a1",
+            "name": "Economy",
+            "score_out_of_10": 6.5145
+        },
+        {
+            "color": "#88149f",
+            "name": "Taxation",
+            "score_out_of_10": 4.062
+        },
+        {
+            "color": "#b9117d",
+            "name": "Internet Access",
+            "score_out_of_10": 6.599499999999999
+        },
+        {
+            "color": "#d10d54",
+            "name": "Leisure \u0026 Culture",
+            "score_out_of_10": 8.193
+        },
+        {
+            "color": "#e70c26",
+            "name": "Tolerance",
+            "score_out_of_10": 6.1339999999999995
+        },
+        {
+            "color": "#f1351b",
+            "name": "Outdoors",
+            "score_out_of_10": 5.4155
+        }
+    ],
+    "summary": "\u003cp\u003eChicago, Illinois, is among the best cities with a \u003cb\u003evibrant startup scene\u003c/b\u003e.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in \u003cb\u003eventure capital\u003c/b\u003e, \u003cb\u003ebusiness freedom\u003c/b\u003e and \u003cb\u003ehealthcare\u003c/b\u003e.\n    \n\n    \n\u003c/p\u003e\n\n\n    \u003cp\u003eChicago is one of the top ten city matches for 5.5% of Teleport users.\u003c/p\u003e\n",
+    "teleport_city_score": 62.90500000000001
+}

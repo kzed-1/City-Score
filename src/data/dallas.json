@@ -1,0 +1,129 @@
+{   
+    "name": "Dallas",
+    "_links": {
+        "curies": [
+            {
+                "href": "https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/",
+                "name": "location",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/City/#!/relations/{rel}/",
+                "name": "city",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/UrbanArea/#!/relations/{rel}/",
+                "name": "ua",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Country/#!/relations/{rel}/",
+                "name": "country",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Admin1Division/#!/relations/{rel}/",
+                "name": "a1",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Timezone/#!/relations/{rel}/",
+                "name": "tz",
+                "templated": true
+            }
+        ],
+        "self": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:dallas/scores/"
+        }
+    },
+    "categories": [
+        {
+            "color": "#f3c32c",
+            "name": "Housing",
+            "score_out_of_10": 5.259000000000001
+        },
+        {
+            "color": "#f3d630",
+            "name": "Cost of Living",
+            "score_out_of_10": 6.090999999999999
+        },
+        {
+            "color": "#f4eb33",
+            "name": "Startups",
+            "score_out_of_10": 7.939500000000001
+        },
+        {
+            "color": "#d2ed31",
+            "name": "Venture Capital",
+            "score_out_of_10": 4.9159999999999995
+        },
+        {
+            "color": "#7adc29",
+            "name": "Travel Connectivity",
+            "score_out_of_10": 4.746499999999999
+        },
+        {
+            "color": "#36cc24",
+            "name": "Commute",
+            "score_out_of_10": 4.4704999999999995
+        },
+        {
+            "color": "#19ad51",
+            "name": "Business Freedom",
+            "score_out_of_10": 8.671
+        },
+        {
+            "color": "#0d6999",
+            "name": "Safety",
+            "score_out_of_10": 4.3389999999999995
+        },
+        {
+            "color": "#051fa5",
+            "name": "Healthcare",
+            "score_out_of_10": 8.439333333333332
+        },
+        {
+            "color": "#150e78",
+            "name": "Education",
+            "score_out_of_10": 4.284
+        },
+        {
+            "color": "#3d14a4",
+            "name": "Environmental Quality",
+            "score_out_of_10": 6.693
+        },
+        {
+            "color": "#5c14a1",
+            "name": "Economy",
+            "score_out_of_10": 6.5145
+        },
+        {
+            "color": "#88149f",
+            "name": "Taxation",
+            "score_out_of_10": 4.772
+        },
+        {
+            "color": "#b9117d",
+            "name": "Internet Access",
+            "score_out_of_10": 6.4609999999999985
+        },
+        {
+            "color": "#d10d54",
+            "name": "Leisure \u0026 Culture",
+            "score_out_of_10": 7.1685
+        },
+        {
+            "color": "#e70c26",
+            "name": "Tolerance",
+            "score_out_of_10": 5.294
+        },
+        {
+            "color": "#f1351b",
+            "name": "Outdoors",
+            "score_out_of_10": 4.501999999999999
+        }
+    ],
+    "summary": "\u003cp\u003eDallas, Texas, is among the top cities with a \u003cb\u003efree business environment\u003c/b\u003e.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in \u003cb\u003estartups\u003c/b\u003e, \u003cb\u003ehealthcare\u003c/b\u003e and \u003cb\u003eenvironmental quality\u003c/b\u003e.\n    \n\n    \n\u003c/p\u003e\n\n\n    \u003cp\u003eDallas is one of the top ten city matches for 6.0% of Teleport users.\u003c/p\u003e\n",
+    "teleport_city_score": 59.02243243243244
+}

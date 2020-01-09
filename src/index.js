@@ -7,7 +7,12 @@ let name, summary, cityScore;
 
 let citySelection = "/src/data/newyork.json"
 
-let cities = ["/src/data/newyork.json", "/src/data/sanfran.json", "/src/data/seattle.json", "/src/data/toronto.json", "/src/data/boston.json"] 
+let cities = [
+    "/src/data/newyork.json", "/src/data/sanfran.json", "/src/data/seattle.json", 
+    "/src/data/toronto.json", "/src/data/boston.json", "/src/data/chicago.json", 
+    "/src/data/losangeles.json", "/src/data/dallas.json", "/src/data/phoenix.json", 
+    "/src/data/raleigh.json"
+    ] 
 
 
 
@@ -20,6 +25,7 @@ function render() {
         bostonData = data.categories
         createBarGraph();
         createTable();
+        createTitle();
     })
 
 }
@@ -28,7 +34,29 @@ function renderall() {
     cities.forEach(city => {
         citySelection = city 
         render()
-    })
+    });
+}
+
+function showFirstCity () {
+    // const firstCity = document.querySelector("")
+    showCharts(" New York")
+    showTables(" New York")
+    showTitle(" New York")
+}
+
+function createTitle () {
+    const cityName = document.createElement("h1")
+    const bodyEle = document.querySelector("body")
+    const dropDownEle = document.querySelector(".profile-chart-wrapper")
+
+    cityName.textContent = name
+
+    if (name === "New York"){
+        cityName.className = `citytitle title-${name}`
+    }else {
+        cityName.className = `citytitle title-${name} hidden`
+    }
+    bodyEle.insertBefore(cityName, dropDownEle)
 }
 
 
@@ -63,7 +91,13 @@ function createBarGraph() {
         .attr("width", width)
         .attr("height", height);
     
-    svg.attr("class",`citychart ${name} hidden`)
+    if (name === "New York"){
+        svg.attr("class", `citychart ${name}`)
+
+    }else {
+        svg.attr("class",`citychart ${name} hidden`)
+    }
+
 
     svg.selectAll("rect")
         .data(bostonData)
@@ -133,7 +167,6 @@ function createBarGraph() {
 
 function createTable () {
 
-
     const columns = ["name", "score_out_of_10"]
     const columnNames = ["Categories", "Score"]
     
@@ -146,6 +179,13 @@ function createTable () {
         .append("header")
         .attr("class", "table-header");
     let tablebody = table.append("tablebody");
+
+    if (name === "New York") {
+        table.attr("class", `table table-${name}`)
+
+    } else {
+        table.attr("class", `table table-${name} hidden`)
+    }
 
     header
         .append("tr")
@@ -247,6 +287,27 @@ function showTables(cityName) {
     }
 }
 
+function showTitle(cityName) {
+    const cityNameRemovedSpace = cityName.split(" ")[1]
+    const cityTitle = document.querySelector(`.title-${cityNameRemovedSpace}`)
+
+    const allCityTitle = document.querySelectorAll(".citytitle")
+    allCityTitle.forEach(cityTitle => {
+        if (!cityTitle.className.includes("hidden")) {
+            cityTitle.className = cityTitle.className + " hidden"
+
+        }
+    })
+
+    if (cityTitle.className.includes("hidden")) {
+        cityTitle.className = `citytitle title-${cityNameRemovedSpace}`
+    } else {
+
+        cityTitle.className = cityTitle.className + " hidden"
+
+    }
+}
+
 function selectItem(ele) {
     const eleText = ele.textContent
     const titleEle = document.querySelector(".title")
@@ -255,6 +316,7 @@ function selectItem(ele) {
 
     showCharts(eleText)
     showTables(eleText)
+    showTitle(eleText)
 }
 
 titleDropDown.addEventListener('click', () => showDropdown(menuList))
@@ -265,6 +327,6 @@ cityList.forEach(city => {
 
 
 
-renderall ()
+renderall()
 
 

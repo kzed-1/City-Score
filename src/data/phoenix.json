@@ -1,0 +1,129 @@
+{
+    "name": "Phoenix",
+    "_links": {
+        "curies": [
+            {
+                "href": "https://developers.teleport.org/api/resources/Location/#!/relations/{rel}/",
+                "name": "location",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/City/#!/relations/{rel}/",
+                "name": "city",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/UrbanArea/#!/relations/{rel}/",
+                "name": "ua",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Country/#!/relations/{rel}/",
+                "name": "country",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Admin1Division/#!/relations/{rel}/",
+                "name": "a1",
+                "templated": true
+            },
+            {
+                "href": "https://developers.teleport.org/api/resources/Timezone/#!/relations/{rel}/",
+                "name": "tz",
+                "templated": true
+            }
+        ],
+        "self": {
+            "href": "https://api.teleport.org/api/urban_areas/slug:phoenix/scores/"
+        }
+    },
+    "categories": [
+        {
+            "color": "#f3c32c",
+            "name": "Housing",
+            "score_out_of_10": 6.5329999999999995
+        },
+        {
+            "color": "#f3d630",
+            "name": "Cost of Living",
+            "score_out_of_10": 6.208
+        },
+        {
+            "color": "#f4eb33",
+            "name": "Startups",
+            "score_out_of_10": 6.508500000000001
+        },
+        {
+            "color": "#d2ed31",
+            "name": "Venture Capital",
+            "score_out_of_10": 4.558
+        },
+        {
+            "color": "#7adc29",
+            "name": "Travel Connectivity",
+            "score_out_of_10": 3.3024999999999998
+        },
+        {
+            "color": "#36cc24",
+            "name": "Commute",
+            "score_out_of_10": 4.828500000000001
+        },
+        {
+            "color": "#19ad51",
+            "name": "Business Freedom",
+            "score_out_of_10": 8.671
+        },
+        {
+            "color": "#0d6999",
+            "name": "Safety",
+            "score_out_of_10": 2.5829999999999997
+        },
+        {
+            "color": "#051fa5",
+            "name": "Healthcare",
+            "score_out_of_10": 8.567333333333334
+        },
+        {
+            "color": "#150e78",
+            "name": "Education",
+            "score_out_of_10": 4.590999999999999
+        },
+        {
+            "color": "#3d14a4",
+            "name": "Environmental Quality",
+            "score_out_of_10": 4.625249999999999
+        },
+        {
+            "color": "#5c14a1",
+            "name": "Economy",
+            "score_out_of_10": 6.5145
+        },
+        {
+            "color": "#88149f",
+            "name": "Taxation",
+            "score_out_of_10": 4.488
+        },
+        {
+            "color": "#b9117d",
+            "name": "Internet Access",
+            "score_out_of_10": 6.178
+        },
+        {
+            "color": "#d10d54",
+            "name": "Leisure \u0026 Culture",
+            "score_out_of_10": 6.8100000000000005
+        },
+        {
+            "color": "#e70c26",
+            "name": "Tolerance",
+            "score_out_of_10": 5.5649999999999995
+        },
+        {
+            "color": "#f1351b",
+            "name": "Outdoors",
+            "score_out_of_10": 6.7355
+        }
+    ],
+    "summary": "\u003cp\u003ePhoenix, Arizona, is among the top cities with a \u003cb\u003efree business environment\u003c/b\u003e.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in \u003cb\u003ehealthcare\u003c/b\u003e, \u003cb\u003eleisure \u0026 culture\u003c/b\u003e and \u003cb\u003eoutdoors\u003c/b\u003e.\n    \n\n    \n\u003c/p\u003e\n\n\n    \u003cp\u003ePhoenix is one of the top ten city matches for 0.2% of Teleport users.\u003c/p\u003e\n",
+    "teleport_city_score": 56.66256756756756
+}

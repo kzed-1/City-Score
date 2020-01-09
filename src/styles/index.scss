@@ -12,10 +12,15 @@
     background-color: white;
     list-style-type: none;
     z-index: 1;
+    width: 100px;
+    border: 1px solid black;
+    left: 10px;
 }
 
 .list-items {
     list-style-type: none;
+    padding-left: 0px;
+    text-align: center;
 }
 
 .hidden {
@@ -31,6 +36,7 @@
 .bar {
     animation-name: animateWidth;
     animation-duration: 3s;
+    border-radius: 10px;
 }
 
 .table {
@@ -54,3 +60,15 @@
     margin-right: 17px;
 }
 
+.citytitle {
+    text-align: center;
+}
+
+.dropdown-menu {
+    width: 100px;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+}
