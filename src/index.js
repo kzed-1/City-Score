@@ -2,7 +2,7 @@ import './styles/index.scss';
 
 
 
-let bostonData = []
+let cityData = []
 let name, summary, cityScore;
 
 let citySelection = "/src/data/newyork.json"
@@ -22,10 +22,11 @@ function render() {
         name = data.name
         summary = data.summary
         cityScore = data.teleport_city_score
-        bostonData = data.categories
+        cityData = data.categories
         createBarGraph();
         createTable();
         createTitle();
+        createSummary();
     })
 
 }
@@ -37,17 +38,10 @@ function renderall() {
     });
 }
 
-function showFirstCity () {
-    // const firstCity = document.querySelector("")
-    showCharts(" New York")
-    showTables(" New York")
-    showTitle(" New York")
-}
-
 function createTitle () {
     const cityName = document.createElement("h1")
-    const bodyEle = document.querySelector("body")
-    const dropDownEle = document.querySelector(".profile-chart-wrapper")
+    const sectionEle = document.querySelector("section")
+    // const dropDownEle = document.querySelector(".dropdown-menu")
 
     cityName.textContent = name
 
@@ -56,7 +50,23 @@ function createTitle () {
     }else {
         cityName.className = `citytitle title-${name} hidden`
     }
-    bodyEle.insertBefore(cityName, dropDownEle)
+    // sectionEle.insertBefore(cityName, dropDownEle)
+    sectionEle.appendChild(cityName)
+}
+
+function createSummary() {
+    const citySummaryEle = document.createElement("p")
+    const sectionEle = document.querySelector("section")
+    
+    citySummaryEle.textContent = summary.replace(/[<].{1,2}[>]/g, "")
+
+    if (name === "New York") {
+        citySummaryEle.className = `citySummary summary-${name}`
+    } else {
+        citySummaryEle.className = `citySummary summary-${name} hidden`
+    }
+
+    sectionEle.insertAdjacentElement("afterend", citySummaryEle)
 }
 
 
@@ -70,8 +80,8 @@ function createBarGraph() {
     var height = 530;
 
     // Get length of dataset
-    var arrayLength = bostonData.length; // length of dataset
-    var maxValue = d3.max(bostonData, function (d) { return +d.score_out_of_10; }); // get maximum
+    var arrayLength = cityData.length; // length of dataset
+    var maxValue = d3.max(cityData, function (d) { return +d.score_out_of_10; }); // get maximum
     var x_axisLength = 500; // length of x-axis in our layout
     var y_axisLength = 500; // length of y-axis in our layout
 
@@ -100,7 +110,7 @@ function createBarGraph() {
 
 
     svg.selectAll("rect")
-        .data(bostonData)
+        .data(cityData)
         .enter()
         .append("rect")
         .attr("y", function (d, i) {
@@ -126,6 +136,9 @@ function createBarGraph() {
         })
         .on("mouseout", function(d) {
             return tooltip.style("visibility", "hidden")
+        })
+        .attr("id", function(d) {             
+            return d.name.replace(/\s/g, "")
         })
 
 
@@ -161,7 +174,7 @@ function createBarGraph() {
         .style("margin", "0 auto")
         .style("border-radius", "10px")
         .style("padding", "10px")
-        .style("border", "1px solid black")
+        .style("border", "2px solid black")
 };
 
 
@@ -174,7 +187,7 @@ function createTable () {
         .append('table')
         .attr("class", `table table-${name} hidden`)
         .style("border-radius", "10px")
-        .style("border", "1px solid black");
+        .style("border", "2px solid black");
     let header = table
         .append("header")
         .attr("class", "table-header");
@@ -207,7 +220,7 @@ function createTable () {
 
     let rows = tablebody
         .selectAll("tr")
-        .data(bostonData)
+        .data(cityData)
         .enter()
         .append("tr");
     
@@ -230,18 +243,33 @@ function createTable () {
                 return d.value
             }
         })
+        .attr("id", function(d) {
+            debugger
+            if (typeof d.value === "string"){
+                const newStr = d.value.replace(/\s/g, "")
+                return `${newStr}`
+            }else {
+                return d.value
+            }
+        })
 }
 
 
-const titleDropDown = document.querySelector('.title')
-const menuList = document.querySelector('.menu-list')
+const titleDropDown = document.querySelector(".title")
+const menuList = document.querySelector(".menu-list")
 const cityList = document.querySelectorAll(".city")
 
-function showDropdown(ele) {
-    if (ele.className.includes("active")) {
+function toggleDropdown(ele) {
+    const dropdownButtonEle = document.querySelector(".dropdown-menu")
+    if (ele.className.includes("inactive")) {
         ele.className = ele.className.split(" ")[0]
+        ele.style.borderRadius = "0 0 10px 10px"
+        dropdownButtonEle.style.borderRadius = "10px 10px 0 0"
+
     } else {
-        ele.className = ele.className + " active"
+        ele.className = ele.className + " inactive"
+        ele.style.borderRadius = "10px"
+        dropdownButtonEle.style.borderRadius = "10px"
     }
 }
 
@@ -308,18 +336,53 @@ function showTitle(cityName) {
     }
 }
 
+function showSummary(cityName) {
+    const cityNameRemovedSpace = cityName.split(" ")[1]
+    const citySummary = document.querySelector(`.summary-${cityNameRemovedSpace}`)
+
+    const allCitySummary = document.querySelectorAll(".citySummary")
+    allCitySummary.forEach(citySummary => {
+        if (!citySummary.className.includes("hidden")) {
+            citySummary.className = citySummary.className + " hidden"
+
+        }
+    })
+
+    if (citySummary.className.includes("hidden")) {
+        citySummary.className = `citySummary summary-${cityNameRemovedSpace}`
+    } else {
+
+        citySummary.className = citySummary.className + " hidden"
+
+    }
+}
+
+// add event listener on the bars to 
+
+function addEvents() {
+    const barList = document.querySelectorAll(".bar")
+    
+    barList.forEach(bar => {
+        bar.add
+    })
+    debugger
+}
+
+
+
 function selectItem(ele) {
     const eleText = ele.textContent
     const titleEle = document.querySelector(".title")
     titleEle.textContent = eleText;
-    showDropdown(menuList);
+    toggleDropdown(menuList);
 
     showCharts(eleText)
     showTables(eleText)
     showTitle(eleText)
+    showSummary(eleText)
 }
 
-titleDropDown.addEventListener('click', () => showDropdown(menuList))
+titleDropDown.addEventListener('click', () => toggleDropdown(menuList))
 
 cityList.forEach(city => {
     city.addEventListener('click', () => selectItem(city))
@@ -329,4 +392,5 @@ cityList.forEach(city => {
 
 renderall()
 
+addEvents()
 
