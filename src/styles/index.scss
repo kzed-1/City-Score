@@ -95,7 +95,7 @@
 .title-dropdown-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     width: 843px;
     margin: 0 auto;
 }
@@ -233,6 +233,11 @@
     width: auto;
     height: 100%;
     color: black;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
 }
 
 

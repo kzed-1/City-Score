@@ -42,12 +42,15 @@ function renderall() {
 }
 
 
-const titleDropDown = document.querySelector(".title")
+// const titleDropDown = document.querySelector(".title-dropdown-wrapper")
+const titleDropDownButton = document.querySelector(".title")
 const menuList = document.querySelector(".menu-list")
 const cityList = document.querySelectorAll(".city")
 
 
-titleDropDown.addEventListener('click', () => Util.toggleDropdown(menuList))
+titleDropDownButton.addEventListener('click', () => Util.toggleDropdown(menuList))
+titleDropDownButton.addEventListener('blur', () => Util.closeDropdown())
+menuList.addEventListener('blur', () => Util.closeDropdown())
 
 cityList.forEach(city => {
     city.addEventListener('click', () => Util.selectItem(city))

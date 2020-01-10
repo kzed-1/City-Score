@@ -142,6 +142,7 @@ export function selectItem(ele) {
 }
 
 export function closeDropdown() {
+    debugger
     const dropdownMenu = document.querySelector(".menu-list")
 
     if (!dropdownMenu.className.includes("inactive")) {

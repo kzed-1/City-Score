@@ -88,7 +88,6 @@ function createTable(cityData, name) {
                 return d.value
             }
         })
-    // .style("width", "177px")
 }
 
 export default createTable;
