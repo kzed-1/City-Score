@@ -24,10 +24,9 @@ In City Score, users can:
 * Vanilla javascript for data manipulation
 * D3 for generating the graph
 * Web pack as the bundler 
-* Teleport API that supplies the data
 
 ## Implementation Timeline:
-* Day 1 : collect data from APi, set up the skeleton, create the logic using vanilla DOM manipulation
+* Day 1 : collect data from teleport, set up the skeleton, create the logic using vanilla DOM manipulation
 * Day 2: research D3 and figure out how to implement the data visualization 
 * Day 3: CSS and finishing touches for the visualization 
 
