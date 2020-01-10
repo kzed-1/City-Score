@@ -46,7 +46,7 @@ function renderall() {
 function createTitle () {
     const cityName = document.createElement("h1")
     const sectionEle = document.querySelector("section")
-    // const dropDownEle = document.querySelector(".dropdown-menu")
+    const linkWrapperEle = document.querySelector(".link-wrappers")
 
     cityName.textContent = name
 
@@ -55,8 +55,8 @@ function createTitle () {
     }else {
         cityName.className = `citytitle title-${name} hidden`
     }
-    // sectionEle.insertBefore(cityName, dropDownEle)
-    sectionEle.appendChild(cityName)
+    sectionEle.insertBefore(cityName, linkWrapperEle)
+    // sectionEle.appendChild(cityName)
 }
 
 function createSummary() {
@@ -260,11 +260,13 @@ function createTable () {
         .attr("id" , function (d) {
             if (typeof d.value === "string") {
                 const newStr = d.value.replace(/\s/g, "")
-                return newStr
+                const newStr2 = newStr.replace(/[&]/g, "")
+                return newStr2
             } else {
                 return d.value
             }
         })
+        // .style("width", "177px")
 }
 
 

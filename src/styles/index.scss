@@ -42,9 +42,10 @@
 }
 
 .table {
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 20px;
     margin-right: 50px;
+    height: 500px;
 }
 
 .header-wrapper {
@@ -52,6 +53,8 @@
     justify-content: space-between;
     margin-bottom: 10px;
     font-weight: 700px;
+    font-size: 20px;
+    margin-top: 2px;
 }
 
 @keyframes animateWidth {
@@ -65,8 +68,8 @@
 
 .citytitle {
     text-align: left;
-    font-size: 50px;;
-    width: 504px;
+    font-size: 50px;
+    width: 225px;
 }
 
 .dropdown-menu {
@@ -93,12 +96,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 839px;
+    width: 843px;
     margin: 0 auto;
 }
 
 .citySummary {
-    width: 839px;
+    width: 843px;
     margin: 0 auto;
     font-size: 25px;
     border: 2px solid black;
@@ -108,7 +111,8 @@
 }
 
 .category {
-  
+    font-size: 17px;
+    margin-right: 5px;
 }
 
 .Housing {
@@ -199,3 +203,36 @@
     color: black;
     font-weight: normal;
 }
+
+.title-page {
+    font-size: 50px;
+}
+
+.header-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    width: 839px;
+    margin: 0 auto;
+
+}
+
+.description {
+    margin-left: 20px;
+}
+
+.link-wrappers {
+    width: 100px;
+    height: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.linkedin-logo, .github-logo, .angellist-logo {
+    width: auto;
+    height: 100%;
+    color: black;
+}
+
+
