@@ -96,7 +96,6 @@ export function showSummary(cityName) {
     }
 }
 
-// add event listener on the bars to 
 
 export function lightupCategories(id) {
     const cityCategory = document.querySelectorAll(`#${id}`)
@@ -142,7 +141,6 @@ export function selectItem(ele) {
 }
 
 export function closeDropdown() {
-    debugger
     const dropdownMenu = document.querySelector(".menu-list")
 
     if (!dropdownMenu.className.includes("inactive")) {

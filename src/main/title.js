@@ -11,7 +11,6 @@ function createTitle(name) {
         cityName.className = `citytitle title-${name} hidden`
     }
     sectionEle.insertBefore(cityName, linkWrapperEle)
-    // sectionEle.appendChild(cityName)
 }
 
 export default createTitle;

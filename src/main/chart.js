@@ -2,15 +2,13 @@ import * as Util from "./util";
 
 
 function createBarGraph(cityData, name) {
-    // debugger;
     var width = 500;
     var height = 530;
 
-    // Get length of dataset
-    var arrayLength = cityData.length; // length of dataset
-    var maxValue = d3.max(cityData, function (d) { return +d.score_out_of_10; }); // get maximum
-    var x_axisLength = 500; // length of x-axis in our layout
-    var y_axisLength = 500; // length of y-axis in our layout
+    var arrayLength = cityData.length; 
+    var maxValue = d3.max(cityData, function (d) { return +d.score_out_of_10; }); 
+    var x_axisLength = 500; 
+    var y_axisLength = 500; 
 
 
     var xScale = d3.scaleLinear()
@@ -62,27 +60,6 @@ function createBarGraph(cityData, name) {
             Util.stopHighlighting()
             return tooltip.style("visibility", "hidden")
         })
-
-
-    // Create y-axis
-    svg.append("line")
-        .attr("x1", 700)
-        .attr("y1", 30)
-        .attr("x2", 700)
-        .attr("y2", 529)
-        .attr("stroke-width", 2)
-        .attr("stroke", "black");
-
-    // Create x-axis
-    svg.append("line")
-        .attr("x1", 30)
-        .attr("y1", 750)
-        .attr("x2", 500)
-        .attr("y2", 750)
-        .attr("stroke-width", 2)
-        .attr("stroke", "black");
-
-
 
     var tooltip = d3.select(".chart")
         .append("div")

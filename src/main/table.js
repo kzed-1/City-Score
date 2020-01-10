@@ -70,7 +70,6 @@ function createTable(cityData, name) {
             }
         })
         .attr("class", function (d) {
-            // debugger
             if (typeof d.value === "string") {
                 const newStr = d.value.replace(/\s/g, "")
                 const newStr2 = newStr.replace(/[&]/g, "")
