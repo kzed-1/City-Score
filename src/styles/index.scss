@@ -69,7 +69,6 @@
 .citytitle {
     text-align: left;
     font-size: 50px;
-    width: 225px;
 }
 
 .dropdown-menu {
@@ -80,6 +79,7 @@
 
 .city:hover {
     background-color: hotpink;
+    font-weight: 700;
 }
 
 .dropdown-menu:hover {
@@ -214,7 +214,7 @@
     justify-content: flex-start;
     width: 839px;
     margin: 0 auto;
-
+    height: 60px;
 }
 
 .description {
