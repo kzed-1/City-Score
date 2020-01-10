@@ -7,12 +7,17 @@ let name, summary, cityScore;
 
 let citySelection = "/src/data/newyork.json"
 
-let cities = [
+const cities = [
     "/src/data/newyork.json", "/src/data/sanfran.json", "/src/data/seattle.json", 
     "/src/data/toronto.json", "/src/data/boston.json", "/src/data/chicago.json", 
     "/src/data/losangeles.json", "/src/data/dallas.json", "/src/data/phoenix.json", 
     "/src/data/raleigh.json"
     ] 
+
+let animationDelay = [
+    "10","20","30","40","50","60","70","80","90",
+    "100","110","120","130","140","150","160"
+]
 
 
 
@@ -86,15 +91,9 @@ function createBarGraph() {
     var y_axisLength = 500; // length of y-axis in our layout
 
 
-    var yScale = d3.scaleLinear()
-        .domain([0, maxValue])
-        .range([0, y_axisLength]);
-
     var xScale = d3.scaleLinear()
         .domain([0, maxValue])
         .range([0, x_axisLength]);
-
-
 
     var svg = d3.select(".chart")
         .append("svg")
@@ -128,6 +127,9 @@ function createBarGraph() {
             return `bar ${d.name}`;
         })
         .on("mouseover", function(d) {
+            const newStr = d.name.replace(/\s/g, "")
+            const newStr2 = newStr.replace(/[&]/g, "")
+            lightupCategories(newStr2)
             return tooltip.style("visibility", "visible").text(d.name + ": " + d.score_out_of_10);
         })
         .on("mousemove", function (d) {
@@ -135,10 +137,8 @@ function createBarGraph() {
                 .style("left",(d3.event.pageX+10)+"px").text(d.name + ": " + d.score_out_of_10.toFixed(2));
         })
         .on("mouseout", function(d) {
+            stopHighlighting()
             return tooltip.style("visibility", "hidden")
-        })
-        .attr("id", function(d) {             
-            return d.name.replace(/\s/g, "")
         })
 
 
@@ -238,17 +238,30 @@ function createTable () {
         .append("td")
         .text(function(d){
             if (typeof d.value === "number"){
-                return `${d.value.toFixed(2)} /10`
+                if (d.value.toFixed(2) === 10){
+                    return "10.0 /10" 
+                }else {
+                    return `${d.value.toFixed(2)} /10`
+                }
             }else {
                 return d.value
             }
         })
-        .attr("id", function(d) {
-            debugger
+        .attr("class", function(d) {
+            // debugger
             if (typeof d.value === "string"){
                 const newStr = d.value.replace(/\s/g, "")
-                return `${newStr}`
+                const newStr2 = newStr.replace(/[&]/g, "")
+                return `category ${newStr2} nonhighlighted`
             }else {
+                return `category ${d.value} nonhighlighted`
+            }
+        })
+        .attr("id" , function (d) {
+            if (typeof d.value === "string") {
+                const newStr = d.value.replace(/\s/g, "")
+                return newStr
+            } else {
                 return d.value
             }
         })
@@ -359,13 +372,32 @@ function showSummary(cityName) {
 
 // add event listener on the bars to 
 
-function addEvents() {
-    const barList = document.querySelectorAll(".bar")
-    
-    barList.forEach(bar => {
-    
+function lightupCategories(id) {
+    const cityCategory = document.querySelectorAll(`#${id}`)
+    const allCityCategories = document.querySelectorAll(".category")
+    allCityCategories.forEach(cityCat => {
+        if (!cityCat.className.includes("nonhighlighted")) {
+            cityCat.className = cityCat.className + " nonhighlighted"
+        }
     })
-    debugger
+
+    cityCategory.forEach(cityCat => {
+        if (cityCat.className.includes(`category ${id} nonhighlighted`)) {
+            cityCat.className = `category ${id}`
+        } else {
+            cityCat.className = cityCat.className + " nonhighlighted"
+        }
+    })
+
+}
+
+function stopHighlighting() {
+    const allCityCategories = document.querySelectorAll(".category")
+    allCityCategories.forEach(cityCat => {
+        if (!cityCat.className.includes("nonhighlighted")) {
+            cityCat.className = cityCat.className + " nonhighlighted"
+        }
+    })
 }
 
 
@@ -392,5 +424,5 @@ cityList.forEach(city => {
 
 renderall()
 
-addEvents()
+
 

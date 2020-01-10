@@ -39,7 +39,6 @@
 .bar {
     animation-name: animateWidth;
     animation-duration: 3s;
-
 }
 
 .table {
@@ -52,6 +51,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    font-weight: 700px;
 }
 
 @keyframes animateWidth {
@@ -93,12 +93,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 815px;
+    width: 839px;
     margin: 0 auto;
 }
 
 .citySummary {
-    width: 815px;
+    width: 839px;
     margin: 0 auto;
     font-size: 25px;
     border: 2px solid black;
@@ -107,4 +107,95 @@
     box-sizing: border-box;
 }
 
+.category {
+  
+}
 
+.Housing {
+    color: #f3c32c;
+    font-weight: 700;
+}
+
+.CostofLiving {
+    color: #f3d630;
+    font-weight: 700;
+}
+
+.Startups {
+    color: #f4eb33;
+    font-weight: 700;
+}
+.VentureCapital {
+    color: #d2ed31;
+    font-weight: 700;
+}
+.TravelConnectivity {
+    color: #7adc29;
+    font-weight: 700;
+}
+
+.Commute {
+    color: #36cc24;
+    font-weight: 700;
+}
+
+.BusinessFreedom {
+    color: #19ad51;
+    font-weight: 700;
+}
+
+.Safety {
+    color: #0d6999;
+    font-weight: 700;
+}
+
+.Healthcare {
+    color: #051fa5;
+    font-weight: 700;
+}
+
+.Education {
+    color: #150e78;
+    font-weight: 700;
+}
+
+.EnvironmentalQuality {
+    color: #3d14a4;
+    font-weight: 700;
+    width: 170px;
+}
+
+.Economy {
+    color: #5c14a1;
+    font-weight: 700;
+}
+
+.Taxation {
+    color: #88149f;
+    font-weight: 700;
+}
+
+.InternetAccess {
+    color: #b9117d;
+    font-weight: 700;
+}
+
+.LeisureCulture {
+    color: #d10d54;
+    font-weight: 700;
+}
+
+.Tolerance {
+    color: #e70c26;
+    font-weight: 700;
+}
+
+.Outdoors {
+    color: #f1351b;
+    font-weight: 700;
+}
+
+.nonhighlighted {
+    color: black;
+    font-weight: normal;
+}
