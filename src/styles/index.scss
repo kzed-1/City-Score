@@ -96,7 +96,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    width: 843px;
+    width: 843px !important;
     margin: 0 auto;
 }
 
@@ -222,17 +222,24 @@
 }
 
 .link-wrappers {
-    width: 100px;
+    width: 100px !important;
     height: 23px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.linkedin-logo, .github-logo, .angellist-logo {
-    width: auto;
+.github-logo {
+    width: 23px;
     height: 100%;
-    color: black;
+}
+.linkedin-logo{
+    width: 27.03px;
+    height: 100%;
+}
+.angellist-logo {
+    width: 16px;
+    height: 100%;
 }
 
 .footer-main {

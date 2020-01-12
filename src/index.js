@@ -10,13 +10,19 @@ import * as Util from './main/util.js';
 let cityData = []
 let name, summary, cityScore;
 
-let citySelection = "/src/data/newyork.json"
+let citySelection = "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/newyork.json"
 
+// const cities = [
+//     "./src/data/newyork.json", "./src/data/sanfran.json", "./src/data/seattle.json", 
+//     "./src/data/toronto.json", "./src/data/boston.json", "./src/data/chicago.json", 
+//     "./src/data/losangeles.json", "./src/data/dallas.json", "./src/data/phoenix.json", 
+//     "./src/data/raleigh.json"
+//     ] 
 const cities = [
-    "/src/data/newyork.json", "/src/data/sanfran.json", "/src/data/seattle.json", 
-    "/src/data/toronto.json", "/src/data/boston.json", "/src/data/chicago.json", 
-    "/src/data/losangeles.json", "/src/data/dallas.json", "/src/data/phoenix.json", 
-    "/src/data/raleigh.json"
+    "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/newyork.json", "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/sanfran.json", "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/seattle.json", 
+    "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/toronto.json", "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/boston.json", "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/chicago.json", 
+    "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/losangeles.json", "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/dallas.json", "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/phoenix.json", 
+    "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/raleigh.json"
     ] 
 
 
