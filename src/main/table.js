@@ -1,13 +1,16 @@
 import * as Util from './util.js'
 
-function createTable(cityData, name) {
+function createTable(cityData, name, element) {
 
     const columns = ["name", "score_out_of_10"]
     const columnNames = ["Categories", "Score"]
 
-    let table = d3.select('.profile')
+    const tableClassName = element === ".profile" ? "table" : "table-right"
+
+
+    let table = d3.select(element)
         .append('table')
-        .attr("class", `table table-${name} hidden`)
+        .attr("class", `${tableClassName} table-${name} hidden`)
         .style("border-radius", "10px")
         .style("border", "2px solid black");
     let header = table
@@ -15,11 +18,23 @@ function createTable(cityData, name) {
         .attr("class", "table-header");
     let tablebody = table.append("tablebody");
 
-    if (name === "New York") {
-        table.attr("class", `table table-${name}`)
+    // if (name === "New York") {
+    //     table.attr("class", `${tableClassName} table-${name}`)
 
-    } else {
-        table.attr("class", `table table-${name} hidden`)
+    // } else {
+    //     table.attr("class", `${tableClassName} table-${name} hidden`)
+    // }
+
+    if (name === "New York" && element === ".profile") {
+        table.attr("class", `${tableClassName} table-${name}`)
+    } else if (element === ".profile" && (name !== "New York")) {
+        table.attr("class", `${tableClassName} table-${name} hidden`)
+    }
+
+    if (name === "San Francisco" && element === ".profile-2") {
+        table.attr("class", `${tableClassName} ${tableClassName}-${name}`)
+    } else if (element === ".profile-2" && (name !== "San Francisco")) {
+        table.attr("class", `${tableClassName} ${tableClassName}-${name} hidden`)
     }
 
     header

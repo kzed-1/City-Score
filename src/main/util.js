@@ -1,5 +1,5 @@
-export function toggleDropdown(ele) {
-    const dropdownButtonEle = document.querySelector(".dropdown-menu")
+export function toggleDropdown(ele,className) {
+    const dropdownButtonEle = document.querySelector(className)
     if (ele.className.includes("inactive")) {
         ele.className = ele.className.split(" ")[0]
         ele.style.borderRadius = "0 0 10px 10px"
@@ -12,12 +12,12 @@ export function toggleDropdown(ele) {
     }
 }
 
-export function showCharts(cityName) {
+export function showCharts(cityName, cityChartClassname) {
     const cityNameRemovedSpace = cityName.split(" ")[1]
-    const cityChart = document.querySelector(`.${cityNameRemovedSpace}`)
+    const cityChart = document.querySelector(`.${cityChartClassname}-${cityNameRemovedSpace}`)
 
 
-    const allCityCharts = document.querySelectorAll(".citychart")
+    const allCityCharts = document.querySelectorAll(`.${cityChartClassname}`)
     allCityCharts.forEach(cityChart => {
         if (!cityChart.className.baseVal.includes("hidden")) {
             cityChart.className.baseVal = cityChart.className.baseVal + " hidden"
@@ -25,7 +25,7 @@ export function showCharts(cityName) {
     })
 
     if (cityChart.className.baseVal.includes("hidden")) {
-        cityChart.className.baseVal = `citychart ${cityName}`
+        cityChart.className.baseVal = `${cityChartClassname} ${cityChartClassname}-${cityNameRemovedSpace}`
     } else {
 
         cityChart.className.baseVal = cityChart.className.baseVal + " hidden"
@@ -33,11 +33,11 @@ export function showCharts(cityName) {
     }
 }
 
-export function showTables(cityName) {
+export function showTables(cityName, tableClassname) {
     const cityNameRemovedSpace = cityName.split(" ")[1]
-    const cityTable = document.querySelector(`.table-${cityNameRemovedSpace}`)
+    const cityTable = document.querySelector(`.${tableClassname}-${cityNameRemovedSpace}`)
 
-    const allCityTables = document.querySelectorAll(".table")
+    const allCityTables = document.querySelectorAll(`.${tableClassname}`)
     allCityTables.forEach(cityTable => {
         if (!cityTable.className.includes("hidden")) {
             cityTable.className = cityTable.className + " hidden"
@@ -46,7 +46,7 @@ export function showTables(cityName) {
     })
 
     if (cityTable.className.includes("hidden")) {
-        cityTable.className = `table table-${cityNameRemovedSpace}`
+        cityTable.className = `${tableClassname} ${tableClassname}-${cityNameRemovedSpace}`
     } else {
 
         cityTable.className = cityTable.className + " hidden"
@@ -54,11 +54,11 @@ export function showTables(cityName) {
     }
 }
 
-export function showTitle(cityName) {
+export function showTitle(cityName, cityTitleClassname) {
     const cityNameRemovedSpace = cityName.split(" ")[1]
-    const cityTitle = document.querySelector(`.title-${cityNameRemovedSpace}`)
+    const cityTitle = document.querySelector(`.${cityTitleClassname}-${cityNameRemovedSpace}`)
 
-    const allCityTitle = document.querySelectorAll(".citytitle")
+    const allCityTitle = document.querySelectorAll(`.${cityTitleClassname}`)
     allCityTitle.forEach(cityTitle => {
         if (!cityTitle.className.includes("hidden")) {
             cityTitle.className = cityTitle.className + " hidden"
@@ -67,7 +67,7 @@ export function showTitle(cityName) {
     })
 
     if (cityTitle.className.includes("hidden")) {
-        cityTitle.className = `citytitle title-${cityNameRemovedSpace}`
+        cityTitle.className = `${cityTitleClassname} ${cityTitleClassname}-${cityNameRemovedSpace}`
     } else {
 
         cityTitle.className = cityTitle.className + " hidden"
@@ -75,11 +75,11 @@ export function showTitle(cityName) {
     }
 }
 
-export function showSummary(cityName) {
+export function showSummary(cityName, citySummaryClassname) {
     const cityNameRemovedSpace = cityName.split(" ")[1]
-    const citySummary = document.querySelector(`.summary-${cityNameRemovedSpace}`)
+    const citySummary = document.querySelector(`.${citySummaryClassname}-${cityNameRemovedSpace}`)
 
-    const allCitySummary = document.querySelectorAll(".citySummary")
+    const allCitySummary = document.querySelectorAll(`.${citySummaryClassname}`)
     allCitySummary.forEach(citySummary => {
         if (!citySummary.className.includes("hidden")) {
             citySummary.className = citySummary.className + " hidden"
@@ -88,10 +88,30 @@ export function showSummary(cityName) {
     })
 
     if (citySummary.className.includes("hidden")) {
-        citySummary.className = `citySummary summary-${cityNameRemovedSpace}`
+        citySummary.className = `${citySummaryClassname} ${citySummaryClassname}-${cityNameRemovedSpace}`
     } else {
 
         citySummary.className = citySummary.className + " hidden"
+
+    }
+}
+
+export function showCityScore(cityName, cityScoreClassname) {
+    const cityNameRemovedSpace = cityName.split(" ")[1]
+    const cityScoreEle = document.querySelector(`.${cityScoreClassname}-${cityNameRemovedSpace}`)
+
+    const allCityScore = document.querySelectorAll(`.${cityScoreClassname}`)
+    allCityScore.forEach(cityScore => {
+        if (!cityScore.className.includes("hidden")) {
+            cityScore.className = cityScore.className + " hidden"
+        }
+    })
+
+    if (cityScoreEle.className.includes("hidden")) {
+        cityScoreEle.className = `${cityScoreClassname} ${cityScoreClassname}-${cityNameRemovedSpace}`
+    } else {
+
+        cityScoreEle.className = cityScore.className + " hidden"
 
     }
 }
@@ -125,25 +145,36 @@ export function stopHighlighting() {
     })
 }
 
-
-
-export function selectItem(ele) {
-    const eleText = ele.textContent
-    const titleEle = document.querySelector(".title")
-    const menuList = document.querySelector(".menu-list")
-    titleEle.textContent = eleText;
-    toggleDropdown(menuList);
-
-    showCharts(eleText)
-    showTables(eleText)
-    showTitle(eleText)
-    showSummary(eleText)
+export function changePic(pics,city, picClassname) {
+    const backgroundEle = document.querySelector(`.${picClassname}`);
+    backgroundEle.style.backgroundImage = `url(${pics[city]})`
 }
 
-export function closeDropdown() {
-    const dropdownMenu = document.querySelector(".menu-list")
 
-    if (!dropdownMenu.className.includes("inactive")) {
-        dropdownMenu.className = "menu-list inactive"
+export function selectItem(ele, titleClassname, menuListClassname, dropdownClassname, cityChartClassname, tableClassname, cityTitleClassname, citySummaryClassname, pics, picClassname, cityScoreClassname) {
+    const eleText = ele.textContent
+    const cityNameNoSpaces = ele.textContent.replace(/\s/g, "")
+    const titleEle = document.querySelector(titleClassname)
+    const menuList = document.querySelector(menuListClassname)
+    titleEle.textContent = eleText;
+    toggleDropdown(menuList, dropdownClassname);
+
+    showCharts(eleText, cityChartClassname)
+    showTables(eleText, tableClassname)
+    showTitle(eleText, cityTitleClassname)
+    showSummary(eleText, citySummaryClassname)
+    showCityScore(eleText, cityScoreClassname)
+    changePic(pics,cityNameNoSpaces, picClassname)
+}
+
+export function closeDropdown(className, dropdownMenuClassname) {
+    const dropdownMenuList = document.querySelector(`.${className}`)
+    const dropdownMenu = document.querySelector(`.${dropdownMenuClassname}`)
+
+    if (!dropdownMenuList.className.includes("inactive")) {
+        dropdownMenuList.className = `${className} inactive`
+        dropdownMenu.style.borderRadius = "10px";
     }
 }
+
+

@@ -1,30 +1,37 @@
 import * as Util from "./util";
 
 
-function createBarGraph(cityData, name) {
-    var width = 500;
-    var height = 530;
+function createBarGraph(cityData, name, element) {
+    const width = 400;
+    const height = 500;
 
-    var arrayLength = cityData.length; 
-    var maxValue = d3.max(cityData, function (d) { return +d.score_out_of_10; }); 
-    var x_axisLength = 500; 
-    var y_axisLength = 500; 
+    const arrayLength = cityData.length; 
+    const maxValue = d3.max(cityData, function (d) { return +d.score_out_of_10; }); 
+    const x_axisLength = 400; 
+    const y_axisLength = 471; 
+
+    const chartClassName = element === ".chart" ? "citychart" : "citychart-right"
 
 
-    var xScale = d3.scaleLinear()
+    const xScale = d3.scaleLinear()
         .domain([0, maxValue])
         .range([0, x_axisLength]);
 
-    var svg = d3.select(".chart")
+    const svg = d3.select(element)
         .append("svg")
         .attr("width", width)
         .attr("height", height);
 
-    if (name === "New York") {
-        svg.attr("class", `citychart ${name}`)
+    if (name === "New York" && element === ".chart") {
+        svg.attr("class", `${chartClassName} ${chartClassName}-${name}`)
+    } else if (element === ".chart" && (name !== "New York")) {
+        svg.attr("class", `${chartClassName} ${chartClassName}-${name} hidden`)
+    } 
 
-    } else {
-        svg.attr("class", `citychart ${name} hidden`)
+    if (name === "San Francisco" && element === ".chart-2") {
+        svg.attr("class", `${chartClassName} ${chartClassName}-${name}`)
+    } else if (element === ".chart-2" && (name !== "San Francisco")){ 
+        svg.attr("class", `${chartClassName} ${chartClassName}-${name} hidden`)
     }
 
 
@@ -61,7 +68,7 @@ function createBarGraph(cityData, name) {
             return tooltip.style("visibility", "hidden")
         })
 
-    var tooltip = d3.select(".chart")
+    const tooltip = d3.select(".chart")
         .append("div")
         .style("position", "absolute")
         .style("font-family", "roboto")

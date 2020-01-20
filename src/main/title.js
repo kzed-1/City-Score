@@ -1,16 +1,37 @@
-function createTitle(name) {
+export function createTitle(name) {
     const cityName = document.createElement("h1")
-    const sectionEle = document.querySelector("section")
-    const linkWrapperEle = document.querySelector(".link-wrappers")
+    const sectionEle = document.querySelector(".title-dropdown-wrapper")
+    const spacerLeft = document.querySelector(".city-score-left")
 
     cityName.textContent = name
 
     if (name === "New York") {
-        cityName.className = `citytitle title-${name}`
+        cityName.className = `citytitle citytitle-${name}`
     } else {
-        cityName.className = `citytitle title-${name} hidden`
+        cityName.className = `citytitle citytitle-${name} hidden`
     }
-    sectionEle.insertBefore(cityName, linkWrapperEle)
+    sectionEle.insertBefore(cityName, spacerLeft)
 }
 
-export default createTitle;
+
+export function createTitle2(name) {
+    const cityName = document.createElement("h1")
+    const sectionEle = document.querySelector(".title-dropdown-wrapper-right")
+    const spacerRight = document.querySelector(".city-score-right")
+
+    cityName.textContent = name
+
+
+
+    if (name === "San Francisco") {
+        cityName.className = `citytitle-right citytitle-right-${name}`
+    } else {
+        cityName.className = `citytitle-right citytitle-right-${name} hidden`
+    }
+    sectionEle.insertBefore(cityName, spacerRight)
+}
+
+
+
+
+

@@ -10,57 +10,82 @@
     <link rel=stylesheet href="./dist/main.css"></link> 
 </head>
 
-<body>
-    <header class="header-main">
-        <h1 class="title-page">City Score</h1>
-        <p class="description">select a city to see their scores...</p>
-    </header>
-    
-
-    <section class="title-dropdown-wrapper">
-        <div class="dropdown-menu">
-            <div class="title">Select a City</div>
-    
-            <div class="menu-list inactive">
-                <ul class="list-items">
-                    <li class="city" id = "/src/data/newyork.json"> New York</li>
-                    <li class="city" id = "/src/data/sanfran.json"> San Francisco</li>
-                    <li class="city" id = "/src/data/seattle.json"> Seattle</li>
-                    <li class="city" id = "/src/data/toronto.json"> Toronto</li>
-                    <li class="city" id = "/src/data/boston.json"> Boston</li>
-                    <li class="city" id = "/src/data/chicago.json"> Chicago</li>
-                    <li class="city" id = "/src/data/losangeles.json"> Los Angeles</li>
-                    <li class="city" id = "/src/data/dallas.json"> Dallas</li>
-                    <li class="city" id = "/src/data/phoenix.json"> Phoenix</li>
-                    <li class="city" id = "/src/data/raleigh.json"> Raleigh</li>
-                </ul>
+<header class="header-main">
+    <div class="name">Kenel Zhao</div>
+    <h1 class="title-page">City Score</h1>
+    <div class="link-wrappers">
+        <a href="https://www.linkedin.com/in/kenel-zhao-961575165/">
+            <img class="linkedin-logo" src="./src/images/LI-In-Bug.png" alt="">
+        </a>
+        <a href="https://github.com/kzed-1">
+            <img class="github-logo" src="./src/images/GitHub-Mark-64px.png" alt="">
+        </a>
+        <a href="https://angel.co/kenel-zhao">
+            <img class="angellist-logo" src="./src/images/AngelList_Black_Victory_Hand.png" alt="">
+        </a>
+    </div>
+</header>
+<main class="main-background">
+    <div class="body-left">
+        <section class="title-dropdown-wrapper">
+            <div class="dropdown-menu">
+                <div class="title">Select a City</div>
+        
+                <div class="menu-list inactive">
+                    <ul class="list-items">
+                        <li class="city" id = "/src/data/newyork.json"> New York</li>
+                        <li class="city" id = "/src/data/sanfran.json"> San Francisco</li>
+                        <li class="city" id = "/src/data/seattle.json"> Seattle</li>
+                        <li class="city" id = "/src/data/toronto.json"> Toronto</li>
+                        <li class="city" id = "/src/data/boston.json"> Boston</li>
+                        <li class="city" id = "/src/data/chicago.json"> Chicago</li>
+                        <li class="city" id = "/src/data/losangeles.json"> Los Angeles</li>
+                        <li class="city" id = "/src/data/dallas.json"> Dallas</li>
+                        <li class="city" id = "/src/data/phoenix.json"> Phoenix</li>
+                        <li class="city" id = "/src/data/raleigh.json"> Raleigh</li>
+                    </ul>
+                </div>
             </div>
+            <div class="city-score-left"></div>
+        </section>
+        <div class="profile-chart-wrapper">
+            <div class="profile"></div>
+            <div class="chart"></div>
         </div>
-        <div class="link-wrappers">
-            <a href="https://www.linkedin.com/in/kenel-zhao-961575165/">
-                <img class="linkedin-logo"src="./src/images/LI-In-Bug.png" alt="">
-            </a>
-            <a href="https://github.com/kzed-1">
-                <img class="github-logo"src="./src/images/GitHub-Mark-64px.png" alt="">
-            </a>
-            <a href="https://angel.co/kenel-zhao">
-                <img class="angellist-logo"src="./src/images/AngelList_Black_Victory_Hand.png" alt="">
-            </a>
+    </div>
+
+    <div class="body-right">
+        <section class="title-dropdown-wrapper-right">
+            <div class="dropdown-menu-right">
+                <div class="title-right">Select a City</div>
+        
+                <div class="menu-list-right inactive">
+                    <ul class="list-items-right">
+                        <li class="city-2" id="/src/data/newyork.json"> New York</li>
+                        <li class="city-2" id="/src/data/sanfran.json"> San Francisco</li>
+                        <li class="city-2" id="/src/data/seattle.json"> Seattle</li>
+                        <li class="city-2" id="/src/data/toronto.json"> Toronto</li>
+                        <li class="city-2" id="/src/data/boston.json"> Boston</li>
+                        <li class="city-2" id="/src/data/chicago.json"> Chicago</li>
+                        <li class="city-2" id="/src/data/losangeles.json"> Los Angeles</li>
+                        <li class="city-2" id="/src/data/dallas.json"> Dallas</li>
+                        <li class="city-2" id="/src/data/phoenix.json"> Phoenix</li>
+                        <li class="city-2" id="/src/data/raleigh.json"> Raleigh</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="city-score-right"></div>
+        </section>
+        <div class="profile-chart-wrapper">
+            <div class="profile-2"></div>
+            <div class="chart-2"></div>
         </div>
-    </section>
-    <div class="profile-chart-wrapper">
-        <div class="profile"></div>
-        <div class="chart"></div>
     </div>
     <script src="./dist/main.js"></script>
-</body>
-
+</main>
 <footer class="footer-main">
     <span>
-        Source: <a href="https://developers.teleport.org/">Teleport, Inc.</a>
-    </span>
-    <span>
-        Kenel Zhao
+        Source: <a class="teleport-link" href="https://developers.teleport.org/">Teleport, Inc.</a>
     </span>
 </footer>
 

@@ -53,6 +53,10 @@ const titleDropDown = document.querySelector('.title')
 const menuList = document.querySelector('.menu-list')
 const listItems = document.querySelectorAll(".city")
 
+const titleDropDownRight = document.querySelector('.title-right')
+const menuListRight = document.querySelector('.menu-list-right')
+const listItemsRight = document.querySelectorAll(".city-2")
+
 function showDropdown(ele) {
 
     if (ele.className.includes("active")) {
@@ -63,9 +67,9 @@ function showDropdown(ele) {
 
 }
 
-function selectItem (ele) {
+function selectItem (ele, className) {
     const eleText = ele.textContent
-    const titleEle = document.querySelector(".title")
+    const titleEle = document.querySelector(className)
 
     titleEle.textContent = eleText;
 }
@@ -73,7 +77,12 @@ function selectItem (ele) {
 titleDropDown.addEventListener('click', () => showDropdown(menuList))
 
 listItems.forEach(city => {
-    city.addEventListener('click', () => selectItem(city))
+    city.addEventListener('click', () => selectItem(city, ".title"))
+})
+titleDropDownRight.addEventListener('click', () => showDropdown(menuListRight))
+
+listItemsRight.forEach(rightCity => {
+    rightCity.addEventListener('click', () => selectItem(rightCity, ".title-right"))
 })
 
 
