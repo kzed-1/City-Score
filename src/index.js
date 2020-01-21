@@ -11,17 +11,29 @@ import * as Util from './main/util.js';
 let cityData = []
 let name, summary, cityScore;
 
+// const cityPics = {
+//     "Boston": "./src/images/boston.jpg",
+//     "Chicago": "./src/images/chicago.jpg",
+//     "Dallas": "./src/images/dallas.jpg",
+//     "LosAngeles": "./src/images/la.jpg",
+//     "Phoenix": "./src/images/phoenix.jpg",
+//     "Raleigh": "./src/images/raleigh.jpg",
+//     "Seattle": "./src/images/seattle.jpg",
+//     "SanFrancisco": "./src/images/sf2.jpg",
+//     "Toronto": "./src/images/toronto.jpg",
+//     "NewYork": "./src/images/newyork2.jpg"
+// }
 const cityPics = {
-    "Boston": "./src/images/boston.jpg",
-    "Chicago": "./src/images/chicago.jpg",
-    "Dallas": "./src/images/dallas.jpg",
-    "LosAngeles": "./src/images/la.jpg",
-    "Phoenix": "./src/images/phoenix.jpg",
-    "Raleigh": "./src/images/raleigh.jpg",
-    "Seattle": "./src/images/seattle.jpg",
-    "SanFrancisco": "./src/images/sf2.jpg",
-    "Toronto": "./src/images/toronto.jpg",
-    "NewYork": "./src/images/newyork2.jpg"
+    "Boston": "https://github.com/kzed-1/City-Score/blob/master/src/images/boston.jpg?raw=true",
+    "Chicago": "https://github.com/kzed-1/City-Score/blob/master/src/images/chicago.jpg?raw=true",
+    "Dallas": "https://github.com/kzed-1/City-Score/blob/master/src/images/dallas.jpg?raw=true",
+    "LosAngeles": "https://github.com/kzed-1/City-Score/blob/master/src/images/la.jpg?raw=true",
+    "Phoenix": "https://github.com/kzed-1/City-Score/blob/master/src/images/phoenix.jpg?raw=true",
+    "Raleigh": "https://github.com/kzed-1/City-Score/blob/master/src/images/raleigh.jpg?raw=true",
+    "Seattle": "https://github.com/kzed-1/City-Score/blob/master/src/images/seattle.jpg?raw=true",
+    "SanFrancisco": "https://github.com/kzed-1/City-Score/blob/master/src/images/sf2.jpg?raw=true",
+    "Toronto": "https://github.com/kzed-1/City-Score/blob/master/src/images/toronto.jpg?raw=true",
+    "NewYork": "https://github.com/kzed-1/City-Score/blob/master/src/images/newyork2.jpg?raw=true"
 }
 
 let citySelection = "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/newyork.json"
