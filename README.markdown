@@ -7,7 +7,7 @@ This app allows users to select from 10 cities and find out the their quality of
 ## wireframe
 
 <p align="center">
-    <img src ="https://raw.githubusercontent.com/kzed-1/images/master/wireframe.png"/>
+    <img src ="https://github.com/kzed-1/images/blob/master/wireframenew.png?raw=true"/>
 </p>
 
 

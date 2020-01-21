@@ -10,6 +10,7 @@ function createTable(cityData, name, element) {
 
     let table = d3.select(element)
         .append('table')
+        .attr("viewBox", `0 0 100 100`)
         .attr("class", `${tableClassName} table-${name} hidden`)
         .style("border-radius", "10px")
         .style("border", "2px solid black");

@@ -1,3 +1,6 @@
+
+
+
 .dropdown-menu, .dropdown-menu-right {
     display: block;
     border: 2px solid black;
@@ -34,8 +37,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: auto;
+    width: 95%;
+    height: 64%;
+    margin: 0 auto;
 }
 
 .bar {
@@ -44,17 +48,45 @@
 }
 
 .table, .table-right {
-    margin-top: 30px;
-    padding: 10px;
+    margin-top: 10px;
+    padding: 5px;
     width: 100%;
     height: 100%;
+    font-size: 12px; 
     background-color: rgba($color: white, $alpha: 0.8);
-    overflow: scroll;
+    margin: 0 auto;
+}
+
+
+td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 100%;
+}
+
+@media screen and (max-width: 1500px) { /* Large Desktop */ 
+    td {
+    padding: 0px;
+    height: 100%;
+    }
+}
+
+tr {
+    width: 100%;
+    height: 100%;
 }
 
 .profile, .profile-2 {
     margin-right: 10px;
+    width: 40%;
+    height: 95%;
+    
 }
+
+table {
+    margin: 0 auto;
+}
+
 
 .header-wrapper {
     display: flex;
@@ -70,8 +102,8 @@
     to {width: attr(width) }
 }
 
-.score {
-    margin-right: 17px;
+.Score {
+    margin-right: 21px;
 }
 
 .citytitle, .citytitle-right {
@@ -87,7 +119,8 @@
     width: 35%;
     height: 23px;
     position: relative;
-    background-color: rgba($color: white, $alpha: 0.8)
+    background-color: rgba($color: white, $alpha: 0.8);
+    padding: 5px;
 }
 
 .city:hover, .city-2:hover {
@@ -105,6 +138,9 @@
     font-size: 20px;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -119,14 +155,14 @@
 
 .citySummary, .citySummary-right {
     margin: 0 auto;
-    font-size: 15px;
+    font-size: 17px;
     border: 2px solid black;
     border-radius: 10px;
     padding: 5px;
     box-sizing: border-box;
     background-color: rgba($color: white, $alpha: 0.8);
     width: 96%;
-    height: 14%;
+    height: 18%;
     text-overflow: ellipsis;
     overflow: scroll;
     
@@ -298,6 +334,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    overflow: auto;
     
 }
 
@@ -344,14 +381,25 @@
 }
 
 .score-left, .score-right{
-    width: 200px;
+    width: 150px;
     color: black;
     font-size: 20px;
     background-color: rgba($color: white, $alpha: 0.8);
     border-radius: 10px;
     text-align: center;
     font-weight: 700px;
+    padding: 5px;
     border: 2px solid black;
 
 }
 
+.down-arrow {
+    font-size: 10px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.chart, .chart-2{
+    width: 60%;
+    height: 100%;
+}

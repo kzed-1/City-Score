@@ -2,13 +2,17 @@ import * as Util from "./util";
 
 
 function createBarGraph(cityData, name, element) {
-    const width = 400;
-    const height = 500;
+    // const width = 400;
+    // const height = 500;
+    const width = 600;
+    const height = 700;
 
     const arrayLength = cityData.length; 
     const maxValue = d3.max(cityData, function (d) { return +d.score_out_of_10; }); 
-    const x_axisLength = 400; 
-    const y_axisLength = 471; 
+    // const x_axisLength = 400; 
+    // const y_axisLength = 471; 
+    const x_axisLength = 600; 
+    const y_axisLength = 671; 
 
     const chartClassName = element === ".chart" ? "citychart" : "citychart-right"
 
@@ -19,8 +23,9 @@ function createBarGraph(cityData, name, element) {
 
     const svg = d3.select(element)
         .append("svg")
-        .attr("width", width)
-        .attr("height", height);
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        // .attr("width", width)
+        // .attr("height", height);
 
     if (name === "New York" && element === ".chart") {
         svg.attr("class", `${chartClassName} ${chartClassName}-${name}`)
