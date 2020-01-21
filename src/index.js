@@ -23,6 +23,8 @@ let name, summary, cityScore;
 //     "Toronto": "./src/images/toronto.jpg",
 //     "NewYork": "./src/images/newyork2.jpg"
 // }
+
+
 const cityPics = {
     "Boston": "https://github.com/kzed-1/City-Score/blob/master/src/images/boston.jpg?raw=true",
     "Chicago": "https://github.com/kzed-1/City-Score/blob/master/src/images/chicago.jpg?raw=true",
