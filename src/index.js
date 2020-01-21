@@ -12,16 +12,16 @@ let cityData = []
 let name, summary, cityScore;
 
 const cityPics = {
-    "Boston": "/src/images/boston.jpg",
-    "Chicago": "/src/images/chicago.jpg",
-    "Dallas": "/src/images/dallas.jpg",
-    "LosAngeles": "/src/images/la.jpg",
-    "Phoenix": "/src/images/phoenix.jpg",
-    "Raleigh": "/src/images/raleigh.jpg",
-    "Seattle": "/src/images/seattle.jpg",
-    "SanFrancisco": "/src/images/sf2.jpg",
-    "Toronto": "/src/images/toronto.jpg",
-    "NewYork": "/src/images/newyork2.jpg"
+    "Boston": "./src/images/boston.jpg",
+    "Chicago": "./src/images/chicago.jpg",
+    "Dallas": "./src/images/dallas.jpg",
+    "LosAngeles": "./src/images/la.jpg",
+    "Phoenix": "./src/images/phoenix.jpg",
+    "Raleigh": "./src/images/raleigh.jpg",
+    "Seattle": "./src/images/seattle.jpg",
+    "SanFrancisco": "./src/images/sf2.jpg",
+    "Toronto": "./src/images/toronto.jpg",
+    "NewYork": "./src/images/newyork2.jpg"
 }
 
 let citySelection = "https://raw.githubusercontent.com/kzed-1/City-Score/master/src/data/newyork.json"
