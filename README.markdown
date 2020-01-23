@@ -4,6 +4,11 @@
 
 This app allows users to select from 10 cities and find out the their quality of life score based on 16 categories: Housing, Cost of living, startups, venture capital, travel connectivity, commute, business freedom, safety, healthcare, education, environmental quality, economy, taxation, internet access, leisure and culture, tolerance, and outdoors. The scores are provided by teleport.org. 
 
+<p align="center">
+    <img src ="https://github.com/kzed-1/images/blob/master/cityscore.png?raw=true"/>
+</p>
+
+
 ## wireframe
 
 <p align="center">
