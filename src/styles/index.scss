@@ -453,8 +453,8 @@ tr {
 
 @media (max-height: 700px), (max-width: 1400px){
     td {
-    padding-top: 1.4px;
-    padding-bottom: 1.4px;
+    padding-top: 1.5px;
+    padding-bottom: 1.5px;
     height: 100%;
     text-align: left;
     }
@@ -507,5 +507,31 @@ tr {
         margin-bottom: 0px;
     }
 }
+
+@media (min-height: 770px) and (max-height: 860px) {
+    .profile, .profile-2 {
+        margin-right: 10px;
+        width: 40%;
+        height: 80%;  
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-height: 860px) and (max-height: 999px),   
+(min-width: 1650px) and (max-width: 1700px) {
+     td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 100%;
+    text-align: left;
+    }
+
+    .profile, .profile-2 {
+        margin-right: 10px;
+        width: 30%; 
+    }
+
+}
+
 
     
