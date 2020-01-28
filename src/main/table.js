@@ -59,7 +59,7 @@ function createTable(cityData, name, element) {
         .selectAll("tr")
         .data(cityData)
         .enter()
-        .append("tr");
+        .append("tr")
 
 
     let cells = rows.selectAll("td")
@@ -90,7 +90,7 @@ function createTable(cityData, name, element) {
                 const newStr2 = newStr.replace(/[&]/g, "")
                 return `category ${newStr2} nonhighlighted`
             } else {
-                return `category ${d.value} nonhighlighted`
+                return `category cat-score nonhighlighted`
             }
         })
         .attr("id", function (d) {
