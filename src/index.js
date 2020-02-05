@@ -82,8 +82,8 @@ function renderall() {
 
 
 // const titleDropDown = document.querySelector(".title-dropdown-wrapper")
-const titleDropDownButton = document.querySelector(".title")
-const titleDropDownButtonRight = document.querySelector(".title-right")
+const titleDropDownButton = document.querySelector(".dropdown-menu")
+const titleDropDownButtonRight = document.querySelector(".dropdown-menu-right")
 const menuList = document.querySelector(".menu-list")
 const menuListRight = document.querySelector(".menu-list-right")
 const cityList = document.querySelectorAll(".city")
@@ -99,10 +99,16 @@ window.addEventListener('click', () => Util.closeDropdown("menu-list", "dropdown
 window.addEventListener('click', () => Util.closeDropdown("menu-list-right", "dropdown-menu-right"))
 
 cityList.forEach(city => {
-    city.addEventListener('click', () => Util.selectItem(city, ".title", ".menu-list", ".dropdown-menu", "citychart", "table", "citytitle", "citySummary", cityPics, "body-left", "score-left"))
+    city.addEventListener('click', (event) => {
+        event.stopPropagation()
+        return Util.selectItem(city, ".title", ".menu-list", ".dropdown-menu", "citychart", "table", "citytitle", "citySummary", cityPics, "body-left", "score-left")
+    })
 })
 cityListRight.forEach(city => {
-    city.addEventListener('click', () => Util.selectItem(city, ".title-right", ".menu-list-right", ".dropdown-menu-right", "citychart-right", "table-right", "citytitle-right", "citySummary-right", cityPics, "body-right", "score-right"))
+    city.addEventListener('click', (event) => {
+        event.stopPropagation();
+        return Util.selectItem(city, ".title-right", ".menu-list-right", ".dropdown-menu-right", "citychart-right", "table-right", "citytitle-right", "citySummary-right", cityPics, "body-right", "score-right")
+    })
 })
 
 renderall()

@@ -3,10 +3,9 @@ export function toggleDropdown(ele,className) {
     if (ele.className.includes("inactive")) {
         ele.className = ele.className.split(" ")[0]
         ele.style.borderRadius = "0 0 10px 10px"
-        dropdownButtonEle.style.borderRadius = "10px 10px 0 0"
-
+        dropdownButtonEle.style.borderRadius = "10px 10px 0 0" 
     } else {
-        ele.className = ele.className + " inactive"
+        ele.className = `${ele.className} inactive`
         ele.style.borderRadius = "10px"
         dropdownButtonEle.style.borderRadius = "10px"
     }
